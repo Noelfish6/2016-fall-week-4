@@ -1,6 +1,4 @@
-console.log('4.3');
-
-var margin = {t:50,r:50,b:50,l:50};
+var margin = {t:100,r:100,b:100,l:100};
 var width = document.getElementsByClassName('canvas')[0].clientWidth - margin.l - margin.r,
     height = document.getElementsByClassName('canvas')[0].clientHeight - margin.t - margin.b;
 
@@ -16,15 +14,7 @@ var plot1 = d3.select('#random').select('.canvas')
     .append('g')
     .attr('transform','translate('+ margin.l+','+margin.t+')');
 
-/*for(var i = 0; i<numOfTrials; i++){
-    var result = Math.random();
 
-    plot1.append('circle')
-        .attr('cy',height/2+(Math.random() -.5)*50)
-        .attr('cx',result/1 * width)
-        .attr('r',3)
-        .style('fill-opacity',.2);
-}*/
 var i = 0;
 
 setInterval(runTrial,50);
@@ -38,10 +28,10 @@ function runTrial(){
         .attr('cy',height/2+(Math.random() -.5)*50)
         .attr('cx',result/1 * width)
         .attr('r',10)
-        .style('fill','red')
+        .style('fill','#F5EB91')
         .transition()
         .duration(300)
-        .style('fill','black')
+        .style('fill','#2A3035')
         .style('fill-opacity',.5)
         .attr('r',3);
 
@@ -74,10 +64,10 @@ function runNormalDist(){
         .attr('cy',height/2+(Math.random() -.5)*50)
         .attr('cx',result/1 * width)
         .attr('r',10)
-        .style('fill','blue')
+        .style('fill','#F5EB91')
         .transition()
         .duration(300)
-        .style('fill','blue')
+        .style('fill','#F5EB91')
         .style('fill-opacity',.5)
         .attr('r',3);
 
@@ -85,10 +75,10 @@ function runNormalDist(){
         .attr('cy',height/2+(Math.random() -.5)*50)
         .attr('cx',normalDist2()/1 * width)
         .attr('r',10)
-        .style('fill','red')
+        .style('fill','#8AB07F')
         .transition()
         .duration(300)
-        .style('fill','red')
+        .style('fill','#8AB07F')
         .style('fill-opacity',.5)
         .attr('r',3);
 
@@ -96,10 +86,10 @@ function runNormalDist(){
         .attr('cy',height/2+(Math.random() -.5)*50)
         .attr('cx',normalDist3()/1 * width)
         .attr('r',10)
-        .style('fill','green')
+        .style('fill','#4B6E65')
         .transition()
         .duration(300)
-        .style('fill','green')
+        .style('fill','#4B6E65')
         .style('fill-opacity',.5)
         .attr('r',3);
 
