@@ -1,5 +1,3 @@
-console.log('4.3');
-
 var margin = {t:100,r:100,b:100,l:100};
 var width = document.getElementsByClassName('canvas')[0].clientWidth - margin.l - margin.r,
     height = document.getElementsByClassName('canvas')[0].clientHeight - margin.t - margin.b;
